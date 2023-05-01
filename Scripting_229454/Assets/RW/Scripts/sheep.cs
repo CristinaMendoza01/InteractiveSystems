@@ -8,10 +8,17 @@ public class sheep : MonoBehaviour
     public float gotHayDestroyDelay;
     private bool hitByHay;
 
+    public float dropDestroyDelay;
+    private Collider myCollider;
+    private Rigidbody myRigidbody;
+
+    private sheepSpawner shSpawner;  // Reference to the sheepSpawner script
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myCollider = GetComponent<Collider>();
+        myRigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,6 +29,7 @@ public class sheep : MonoBehaviour
 
     private void HitByHay()
     {
+        shSpawner.RemoveSheepFromList(gameObject);
         hitByHay = true;
         runSpeed = 0;
 
@@ -35,5 +43,22 @@ public class sheep : MonoBehaviour
             Destroy(other.gameObject);
             HitByHay();
         }
+        else if(other.CompareTag("DropSheep"))
+        {
+            Drop();
+        }
+    }
+
+    private void Drop()
+    {
+        shSpawner.RemoveSheepFromList(gameObject);
+        myRigidbody.isKinematic = false;
+        myCollider.isTrigger = false;
+        Destroy(gameObject, dropDestroyDelay);
+    }
+
+    public void SetSpawner(sheepSpawner spawner)
+    {
+        shSpawner = spawner;
     }
 }
