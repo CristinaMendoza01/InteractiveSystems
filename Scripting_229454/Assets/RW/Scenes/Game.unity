@@ -233,8 +233,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5bb8cf1f4248844ba27ac87ab45174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0
+  movementSpeed: 14
   horizontalBoundary: 22
+  hayBalePrefab: {fileID: 6855983548962808906, guid: e9b0aef790d63624e98482b55587b099,
+    type: 3}
+  haySpawnpoint: {fileID: 493223699}
+  shootInterval: 0.8
+  shootTimer: 0
 --- !u!1 &289565342
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +347,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1524613847715755804, guid: ff9c52423c3a7be49af987edf422bcff,
     type: 3}
   m_PrefabInstance: {fileID: 306621259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &493223699 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1855226494, guid: c91d458c12526534eb19d65378204353,
+    type: 3}
+  m_PrefabInstance: {fileID: 5233456974663517127}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
