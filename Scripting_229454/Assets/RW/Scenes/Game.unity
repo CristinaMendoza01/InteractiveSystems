@@ -230,10 +230,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 230786068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d1a69c956a9944458bc8b0004c9b221, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e5bb8cf1f4248844ba27ac87ab45174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 14
+  horizontalBoundary: 22
 --- !u!1 &289565342
 GameObject:
   m_ObjectHideFlags: 0

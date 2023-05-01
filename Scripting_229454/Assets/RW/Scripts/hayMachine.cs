@@ -5,6 +5,8 @@ using UnityEngine;
 public class hayMachine : MonoBehaviour
 {
     public float movementSpeed;
+    public float horizontalBoundary = 22;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,18 +16,18 @@ public class hayMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateMovement();
     }
 
     private void UpdateMovement()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal"); // 1
 
-        if (horizontalInput < 0) // 2
+        if (horizontalInput < 0 && transform.position.x > -horizontalBoundary) // 2
         {
             transform.Translate(transform.right * -movementSpeed * Time.deltaTime);
         }
-        else if (horizontalInput > 0) // 3
+        else if (horizontalInput > 0 && transform.position.x < horizontalBoundary) // 3
         {
             transform.Translate(transform.right * movementSpeed * Time.deltaTime);
         }
