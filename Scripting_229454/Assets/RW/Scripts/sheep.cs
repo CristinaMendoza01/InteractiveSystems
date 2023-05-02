@@ -46,7 +46,14 @@ public class sheep : MonoBehaviour
 
         SoundManager.Instance.PlaySheepHitClip();
 
-        GameStateManager.Instance.SavedSheep();
+        if(gameObject.CompareTag("YellowSheep")) 
+        {
+            GameStateManager.Instance.SavedYellowSheep();
+        }
+        else
+        {
+            GameStateManager.Instance.SavedSheep();
+        }
 
     }
 

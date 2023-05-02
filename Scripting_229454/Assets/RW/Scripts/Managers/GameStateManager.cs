@@ -37,6 +37,12 @@ public class GameStateManager : MonoBehaviour
         UIManager.Instance.UpdateSheepSaved();
     }
 
+    public void SavedYellowSheep() 
+    {
+        sheepSaved = sheepSaved + 2;
+        UIManager.Instance.UpdateSheepSaved();
+    }
+
     private void GameOver()
     {
         shSpawner.canSpawn = false; 
