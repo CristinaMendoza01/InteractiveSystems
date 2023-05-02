@@ -44,6 +44,8 @@ public class sheep : MonoBehaviour
         twScale.targetScale = 0; 
         twScale.timeToReachTarget = gotHayDestroyDelay; 
 
+        SoundManager.Instance.PlaySheepHitClip();
+
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -65,6 +67,8 @@ public class sheep : MonoBehaviour
         myRigidbody.isKinematic = false;
         myCollider.isTrigger = false;
         Destroy(gameObject, dropDestroyDelay);
+
+        SoundManager.Instance.PlaySheepDroppedClip();
     }
 
     public void SetSpawner(sheepSpawner spawner)
