@@ -1,0 +1,5 @@
+The modifications I have done are:
+- Add a Yellow Sheep
+- Add two new Spawn positions for the Yellow Sheep
+- Add a new Black Heart prefab to the Yellow Sheep
+- Change that when you shoot a Yellow Sheep, instead of sum 1 point, you sum 2 points.
