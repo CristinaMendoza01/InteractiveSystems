@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,4 +44,14 @@ public class sheepSpawner : MonoBehaviour
     {
         sheepList.Remove(sheep);
     }
+
+    public void DestroyAllSheep()
+    {
+        foreach (GameObject sheep in sheepList)
+        {
+            Destroy(sheep); 
+        }
+        sheepList.Clear();
+    }
+
 }

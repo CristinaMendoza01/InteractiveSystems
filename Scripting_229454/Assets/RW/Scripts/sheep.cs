@@ -46,6 +46,8 @@ public class sheep : MonoBehaviour
 
         SoundManager.Instance.PlaySheepHitClip();
 
+        GameStateManager.Instance.SavedSheep();
+
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -69,6 +71,8 @@ public class sheep : MonoBehaviour
         Destroy(gameObject, dropDestroyDelay);
 
         SoundManager.Instance.PlaySheepDroppedClip();
+
+        GameStateManager.Instance.DroppedSheep();
     }
 
     public void SetSpawner(sheepSpawner spawner)
