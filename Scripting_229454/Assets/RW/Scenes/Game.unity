@@ -290,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepSaved: 0
   sheepDropped: 0
-  sheepDroppedBeforeGameOver: 3
+  sheepDroppedBeforeGameOver: 6
   shSpawner: {fileID: 1515438050}
 --- !u!1 &230786068 stripped
 GameObject:
